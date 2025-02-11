@@ -1,148 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Creative Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        nav a:hover {
-            color: #4CAF50;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .section-title {
-            color: #4CAF50;
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .profile-image {
-            display: block;
-            margin: 20px auto;
-            width: 300px;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Welcome to My Creative Website</h1>
-        <p>Your daily dose of inspiration!</p>
-    </header>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-        <section id="home">
-            <h2 class="section-title">Home</h2>
-            <p>This is the homepage where we share exciting content and updates.</p>
-        </section>
-
-        <!-- Image Section -->
-        <!--<section id="image">
-            <h2 class="section-title">Meet Our Team</h2>
-            <img src="https://tf30jan2025.s3.us-east-1.amazonaws.com/profile.jpg" alt="Profile Image" class="profile-image">
-            <p>Here's a snapshot of the creative mind behind this project!</p>
-        </section>
-
-        <section id="about">
-            <h2 class="section-title">About Us</h2>
-            <p>We are a creative agency focused on making ideas come to life.</p>
-        </section>
-
-        <section id="services">
-            <h2 class="section-title">Our Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Web Design</h3>
-                    <p>Beautiful and responsive web designs tailored to your needs.</p>
-                </div>
-                <div class="card">
-                    <h3>Graphic Design</h3>
-                    <p>Eye-catching graphics and branding for your business.</p>
-                </div>
-                <div class="card">
-                    <h3>SEO</h3>
-                    <p>Improve your website’s visibility on search engines.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">Contact Us</h2>
-            <p>If you'd like to get in touch, feel free to reach out to us via the contact form.</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 My Creative Website. All rights reserved.</p>
-    </footer>
-
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -169,7 +24,6 @@
             padding: 20px;
             max-width: 900px;
             margin: auto;
-            text-align: center;
         }
         .card {
             background: white;
@@ -183,12 +37,16 @@
         .card:hover {
             transform: scale(1.02);
         }
+        .profile-container {
+            display: flex;
+            align-items: center;
+        }
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 15px;
+            margin-right: 20px;
         }
         footer {
             text-align: center;
@@ -196,6 +54,13 @@
             background: linear-gradient(135deg, #ff758c, #ff7eb3);
             color: white;
             font-size: 16px;
+        }
+        .card h2 {
+            text-align: center;
+        }
+        .projects h3, .projects ul {
+            text-align: left;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -206,9 +71,13 @@
     
     <section>
         <div class="card">
-            <img src="your-photo.png" alt="Your Photo" class="profile-img">
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate DevOps engineer with expertise in cloud automation, CI/CD, and infrastructure management.</p>
+            <div class="profile-container">
+                <img src="your-photo.png" alt="Your Photo" class="profile-img">
+                <div>
+                    <h2>About Me</h2>
+                    <p>Hello! I'm a passionate DevOps engineer with expertise in cloud automation, CI/CD, and infrastructure management.</p>
+                </div>
+            </div>
         </div>
         
         <div class="card">
@@ -224,16 +93,62 @@
             </ul>
         </div>
         
-        <div class="card">
+        <div class="card projects">
             <h2>Projects</h2>
-            <p><strong>CI/CD Pipeline</strong> - Automated deployment pipeline using Jenkins, Docker, and Kubernetes.</p>
-            <p><strong>Infrastructure as Code</strong> - Managed cloud infrastructure using Terraform and Ansible.</p>
+            <div>
+                <h3>CI/CD Pipeline</h3>
+                <p>Developed an automated deployment pipeline using Jenkins, Docker, and Kubernetes to streamline the process of code integration and delivery.</p>
+                <ul>
+                    <li>Implemented a Jenkins pipeline to automate build, test, and deployment processes.</li>
+                    <li>Containerized applications using Docker for consistency across multiple environments.</li>
+                    <li>Deployed applications on Kubernetes clusters to achieve high availability and scalability.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Infrastructure as Code</h3>
+                <p>Managed cloud infrastructure using Terraform and Ansible to ensure reproducibility and efficient scaling of resources.</p>
+                <ul>
+                    <li>Designed and implemented infrastructure as code (IaC) to automate provisioning and management of cloud resources.</li>
+                    <li>Used Terraform to define and deploy infrastructure on AWS, including EC2 instances, VPCs, and RDS databases.</li>
+                    <li>Utilized Ansible for configuration management and automation of server setups.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Spotify Playlist Management</h3>
+                <p>Automated the creation and management of Spotify playlists using Terraform and the Spotify API.</p>
+                <ul>
+                    <li>Configured the Spotify provider in Terraform for API integration.</li>
+                    <li>Utilized Docker and OAuth2 for secure authentication and API key management.</li>
+                    <li>Implemented Terraform scripts to create playlists and add tracks dynamically.</li>
+                    <li>Leveraged Terraform data blocks to search for and add tracks based on artist information.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cloud-Native Web Voting Application</h3>
+                <p>Developed a cloud-native web application to allow users to vote for their preferred programming language. The application uses a combination of React for the frontend, Go for the backend, and MongoDB for the database.</p>
+                <ul>
+                    <li>Implemented Kubernetes resources like Namespace, Secret, Deployment, Service, StatefulSet, PersistentVolume, and PersistentVolumeClaim.</li>
+                    <li>Created an EKS cluster to deploy and manage the application.</li>
+                    <li>Configured MongoDB with a replica set for high availability.</li>
+                    <li>Utilized Kubernetes to ensure data persistence and scalability.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Monitoring and Logging</h3>
+                <p>Set up comprehensive monitoring and logging solutions using Prometheus and Grafana to ensure the reliability and performance of applications.</p>
+                <ul>
+                    <li>Configured Prometheus to collect and store metrics from various services.</li>
+                    <li>Created Grafana dashboards to visualize key performance indicators and metrics.</li>
+                    <li>Implemented alerting mechanisms to proactively address potential issues.</li>
+                </ul>
+            </div>
         </div>
         
         <div class="card">
             <h2>Contact</h2>
             <p>Email: n.divyashree272000@gmail.com</p>
-            <p>LinkedIn: linkedin.com/in/ndivya-shree</p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/ndivya-shree" target="_blank">linkedin.com/in/ndivya-shree</a></p>
+            <p>GitHub: <a href="https://github.com/shree270920/" target="_blank">github.com/shree270920</a></p>
         </div>
     </section>
     
@@ -242,4 +157,3 @@
     </footer>
 </body>
 </html>
-
